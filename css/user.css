@@ -1,0 +1,229 @@
+@import url('https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cascadia-code.min.css');
+
+:root {
+    --base-font-family: 'Noto Sans SC', Optima-Regular, Optima, PingFang SC, Microsoft YaHei, sans-serif;
+}
+
+.highlight .line .string {
+    color: var(--highlight-green);
+}
+
+.shaded {
+    opacity: 0.08;
+    transition: opacity 0.2s;
+}
+
+.dark-mode .shaded {
+    opacity: 0.03;
+}
+
+.shaded:hover {
+    opacity: 1;
+}
+
+code,
+pre {
+    font-family: 'Cascadia Mono', 'Sans Mono', 'Consolas', Optima-Regular, Optima, 'PingFang SC', 'Microsoft Yahei', 'Courier', monospace;
+    font-size: 0.9rem;
+}
+
+.markdown-body>table {
+    width: unset;
+    margin: 0 auto;
+}
+
+.markdown-body img {
+    margin: 0 auto;
+}
+
+.description {
+    text-align: center;
+    color: #888;
+    font-size: 0.9em;
+    padding: 3px 0;
+}
+
+.description.image-desc {
+    margin-top: -0.5rem;
+}
+
+.copy-btn {
+    background-color: transparent;
+}
+
+summary {
+    cursor: pointer;
+}
+
+.admonition ol {
+    margin-left: 24px;
+}
+
+.center {
+    text-align: center;
+}
+
+.iframe-border iframe {
+    border: 1px solid #ccc
+}
+
+/* https://github.com/lxl80/hexo-admonition */
+
+.admonition {
+    margin: 1.5625em 0;
+    padding: 0.6rem;
+    overflow: hidden;
+    /* font-size: .64rem; */
+    page-break-inside: avoid;
+    border-left: 0.3rem solid #42b983;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.05), 0 0 0.05rem rgba(0, 0, 0, 0.1);
+    background-color: #fafafa;
+}
+
+.dark-mode .admonition {
+    background-color: #80808010;
+}
+
+p.admonition-title {
+    position: relative;
+    margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
+    padding: 0.4rem 0.6rem 0.4rem 2.5rem;
+    font-weight: 700;
+    background-color: rgba(66, 185, 131, 0.1);
+}
+
+.admonition-title::before {
+    position: absolute;
+    top: 0.9rem;
+    left: 1rem;
+    width: 12px;
+    height: 12px;
+    background-color: #42b983;
+    border-radius: 50%;
+    content: ' ';
+}
+
+.info .admonition-title,
+.todo .admonition-title {
+    background-color: rgba(0, 184, 212, 0.1);
+}
+
+.warning .admonition-title,
+.attention .admonition-title,
+.caution .admonition-title {
+    background-color: rgba(255, 145, 0, 0.1);
+}
+
+.failure .admonition-title,
+.missing .admonition-title,
+.fail .admonition-title,
+.error .admonition-title {
+    background-color: rgba(255, 82, 82, 0.1);
+}
+
+.admonition.info,
+.admonition.todo {
+    border-color: #00b8d4;
+}
+
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+    border-color: #ff9100;
+}
+
+.admonition.failure,
+.admonition.missing,
+.admonition.fail,
+.admonition.error {
+    border-color: #ff5252;
+}
+
+.info .admonition-title::before,
+.todo .admonition-title::before {
+    background-color: #00b8d4;
+    border-radius: 50%;
+}
+
+.warning .admonition-title::before,
+.attention .admonition-title::before,
+.caution .admonition-title::before {
+    background-color: #ff9100;
+    border-radius: 50%;
+}
+
+.failure .admonition-title::before,
+.missing .admonition-title::before,
+.fail .admonition-title::before,
+.error .admonition-title::before {
+    background-color: #ff5252;
+    border-radius: 50%;
+}
+
+.admonition :last-child {
+    margin-bottom: 0 !important;
+}
+
+.keep-markdown-body p>img,
+.keep-markdown-body>.post p>img,
+.keep-markdown-body>.post>img,
+.keep-markdown-body>img {
+    margin: 1em auto 0;
+    max-height: 24em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 0;
+}
+
+.dark-mode .shrink-line {
+    background: #293544 !important;
+}
+
+.shrink-line {
+    background: #ddd !important;
+}
+
+.first-screen-content .desc-item {
+    font-size: 0;
+}
+
+.first-screen-content .desc:before {
+    content: '风纪委员';
+    color: #eee;
+    filter: drop-shadow(2px 4px 6px #000);
+    letter-spacing: .1em;
+    font-size: 48px;
+    margin-left: .1em;
+}
+
+.first-screen-content .desc:after {
+    content: 'ジャッジメント';
+    color: #eee;
+    filter: drop-shadow(2px 4px 6px #000);
+    font-size: 21px;
+    position: absolute;
+    word-break: keep-all;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    top: -0.7em;
+    z-index: -1;
+    letter-spacing: 0.2em;
+}
+
+.dark-mode .first-screen-content .desc:before {
+    content: '缺陷电气';
+}
+
+.dark-mode .first-screen-content .desc:after {
+    content: 'レディオノイズ';
+}
+
+.first-screen-content .cursor {
+    display: none;
+}

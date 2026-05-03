@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="梦幻兔之宇宙">
+    <meta name="author" content="milkory">
+    
+    <title>
+        
+            W4terCTF 2026 出题记录 — Misc 心理念写 |
+        
+        梦幻兔之宇宙
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/font/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/font/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/font/css/brands.min.css">
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"blog.milkory.com","root":"/","language":"zh-CN","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"title":"梦幻兔之宇宙","author":"milkory","primary_color":"#E682A0","url":"https://blog.milkory.com/","avatar":"/images/avatar.jpg","favicon":"/images/favicon.png","logo":null},"menu":{"主页":"/","归档":"/archives"},"first_screen":{"enable":true,"background_img":"/images/background.jpg","background_img_dark":"/images/background_dark.jpg","description":"梦幻兔之宇宙"},"social_contact":{"enable":true,"links":{"github":"https://github.com/milkory","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"word_count":{"enable":true,"wordcount":true,"min2read":false},"author_label":{"enable":true,"auto":false,"custom_label_list":["🐇"]},"copyright_info":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"local_search":{"enable":true,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"placeholder":null},"gitalk":{"github_id":null,"repository":null,"client_id":null,"client_secret":null},"twikoo":{"env_id":null,"region":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":true},"pjax":{"enable":false},"footer":{"since":2021,"record":{"enable":true,"list":[{"code":"萌ICP备20211551号","link":"https://icp.gov.moe/?keyword=20211551"}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","style":{"article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"scroll":{"progress_bar":{"enable":false},"percent":{"enable":false}}},"home_article":{"category":{"enable":true,"limit":3},"tag":{"enable":true,"limit":5}},"code_copy":{"enable":true,"style":"default"},"copyright_info":{"enable":true},"version":"4.2.3","source_data":{}}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="/css/user.css">
+
+<link rel="stylesheet" href="/css/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.0.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+            <a class="site-name border-box" href="/">
+               梦幻兔之宇宙
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                主页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            主页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        W4terCTF 2026 出题记录 — Misc 心理念写
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">milkory</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-05-03 17:00:00</span>
+            </span>
+
+            <span class="meta-info-item post-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="datetime" data-updated="Sun May 03 2026 09:00:00 GMT+0000">2026-05-03 17:00:00</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/Writeup/">Writeup</a></li>
+                        
+                    
+                            <li class="category-item">&nbsp;<i class="icon fas fa-angle-right"></i>&nbsp;<a href="/categories/Writeup/CTF/">CTF</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+            <span class="meta-info-item post-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>2.4k 字</span>
+            </span>
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"><p>是的，我又来 W4terCTF 出题了！今年除了 Pwn 题以外，我还和 APJifengc 准备了一道 Minecraft 相关的 Misc 题「心理念写」。</p>
+<h3 id="题目内容"><a href="#题目内容" class="headerlink" title="题目内容"></a>题目内容</h3><div class="admonition info"><p class="admonition-title">Misc — 心理念写（Hard / 6 Solves / 823 pts）
+</p><p>我这是在做 MisC！才、才不是在玩什么 Minecraft 呢……</p>
+</div>
+
+<p>题目分发了一个压缩包 <code>thoughtography.zip</code>，包含一个简单的 Minecraft Paper 服务器 Docker 镜像，其中需要注意的是 <code>plugins/Thoughtography-2026.jar</code>。这个插件没有提供源码，但是只有一个类，用市面上的反编译插件可以轻松读懂内容。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> team.w4terdr0p.thoughtography;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.bukkit.*;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.command.Command;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.command.CommandSender;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.entity.Player;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.event.EventHandler;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.event.EventPriority;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.event.Listener;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.event.player.PlayerTeleportEvent;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.event.server.ServerLoadEvent;</span><br><span class="line"><span class="keyword">import</span> org.bukkit.plugin.java.JavaPlugin;</span><br><span class="line"><span class="keyword">import</span> org.jetbrains.annotations.NotNull;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> <span class="keyword">extends</span> <span class="title class_">JavaPlugin</span> <span class="keyword">implements</span> <span class="title class_">Listener</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">String</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="string">&quot;flag&#123;##ERROR##&#125;&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">bp</span> <span class="operator">=</span> <span class="number">50</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span> <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">onEnable</span><span class="params">()</span> &#123;</span><br><span class="line">        flag = getConfig().getString(<span class="string">&quot;flag&quot;</span>);</span><br><span class="line">        Bukkit.getPluginManager().registerEvents(<span class="built_in">this</span>, <span class="built_in">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">win</span><span class="params">(PlayerTeleportEvent event)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (event.getCause() == PlayerTeleportEvent.TeleportCause.UNKNOWN &amp;&amp;</span><br><span class="line">            event.getFrom().toVector().distanceSquared(event.getTo().toVector()) &gt; <span class="number">100.0</span>) &#123;</span><br><span class="line">            event.getPlayer().sendMessage(<span class="string">&quot;Congrats! Your flag: &quot;</span> + flag);</span><br><span class="line">            getLogger().warning(event.getPlayer().getName() + <span class="string">&quot; wins flag ;)&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@EventHandler</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">handle</span><span class="params">(ServerLoadEvent event)</span> &#123;</span><br><span class="line">        <span class="type">var</span> <span class="variable">world</span> <span class="operator">=</span> Objects.requireNonNull(Bukkit.getWorld(<span class="string">&quot;world&quot;</span>));</span><br><span class="line">        world.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, <span class="literal">false</span>);</span><br><span class="line">        world.setGameRule(GameRule.DO_WEATHER_CYCLE, <span class="literal">false</span>);</span><br><span class="line">        world.setGameRule(GameRule.COMMAND_BLOCKS_ENABLED, <span class="literal">false</span>);</span><br><span class="line">        world.setGameRule(GameRule.SPECTATORS_GENERATE_CHUNKS, <span class="literal">false</span>);</span><br><span class="line">        world.setGameRule(GameRule.SPAWN_RADIUS, <span class="number">0</span>);</span><br><span class="line">        world.setTime(<span class="number">6000</span>);</span><br><span class="line">        world.setSpawnLocation(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> -<span class="number">3</span>; i &lt;= <span class="number">3</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> -<span class="number">3</span>; j &lt;= <span class="number">3</span>; ++j) &#123;</span><br><span class="line">                world.getBlockAt(i, <span class="number">0</span>, j).setType(Material.OBSIDIAN);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String[] BLACKLIST = &#123;<span class="string">&quot;gamemode&quot;</span>, <span class="string">&quot;op&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onCommand</span><span class="params">(<span class="meta">@NotNull</span> CommandSender sender, <span class="meta">@NotNull</span> Command command, <span class="meta">@NotNull</span> String label, <span class="meta">@NotNull</span> String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (bp &gt;= <span class="number">50</span> &amp;&amp; sender <span class="keyword">instanceof</span> Player player) &#123;</span><br><span class="line">            <span class="type">var</span> <span class="variable">actual</span> <span class="operator">=</span> String.format(<span class="string">&quot;minecraft:execute as %s at @s run %s&quot;</span>, player.getName(), String.join(<span class="string">&quot; &quot;</span>, args));</span><br><span class="line">            <span class="keyword">if</span> (Arrays.stream(BLACKLIST).anyMatch(actual::contains)) &#123;</span><br><span class="line">                sender.sendMessage(<span class="string">&quot;You feel bad to perform that.&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                bp -= <span class="number">50</span>;</span><br><span class="line">                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), actual);</span><br><span class="line">                sender.sendMessage(<span class="string">&quot;Thoughtography is being performed.&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            sender.sendMessage(<span class="string">&quot;You don&#x27;t have enough brainpower.&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析代码可以知道：</p>
+<ul>
+<li>插件在启动时从配置中读取 <code>flag</code>。</li>
+<li>在玩家触发 <code>PlayerTeleportEvent</code> 事件，传送原因为 <code>UNKNOWN</code>，且传送距离大于 10 格时可以得到 Flag。</li>
+<li>提供了一次任意命令执行机会，只禁用了 <code>gamemode</code> 和 <code>op</code> 两个命令。</li>
+<li>世界初始化禁用了昼夜和天气循环，禁用了命令方块，生成了初始平台，基本没有其他限制。</li>
+</ul>
+<p>另外，还有一些 <code>server.properties</code> 中值得注意的设定。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">difficulty</span>=easy</span><br><span class="line"><span class="attr">enable-command-block</span>=<span class="literal">false</span></span><br><span class="line"><span class="attr">generator-settings</span>=&#123;<span class="string">&quot;layers&quot;</span>\:[],<span class="string">&quot;biome&quot;</span>\:<span class="string">&quot;minecraft\:the_void&quot;</span>,<span class="string">&quot;structures&quot;</span>\:<span class="literal">false</span>&#125;</span><br><span class="line"><span class="attr">max-players</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/5447efe1cb0f178262af9e8c62c2a7fc.png"
+                        alt="出生点"
+                 ><div class="description image-desc">出生点</div></p>
+<h3 id="代码审计"><a href="#代码审计" class="headerlink" title="代码审计"></a>代码审计</h3><p>题目的目标十分明确。<code>UNKNOWN</code> 实际上是默认的传送原因，找到 Paper 中没有正确处理的传送链，只要找到一条符合传送要求的链，再编写实现该传送的命令即可得到 Flag。</p>
+<p>在出题过程中，我们找到了三条可能触发对应传送要求的链，我们给它们分别取一个名字。</p>
+<ul>
+<li><strong>耕地链.</strong> 玩家在耕地上跳跃时，有机会将耕地转化为泥土。由于泥土的方块高度比耕地高一些，服务器会把玩家向上传送一小段距离，这个传送的原因为 <code>UNKNOWN</code>。</li>
+<li><strong>珍珠链.</strong> 玩家在骑乘在一个实体上。当那个实体通过末影珍珠传送时，玩家会被带着传送，这次传送原因为 <code>UNKNOWN</code>。</li>
+<li><strong>末地链.</strong> 玩家通过末地传送门从末地回到主世界时，如果没有触发终末之诗，这次传送的原因为 <code>UNKNOWN</code>。</li>
+</ul>
+<p>其中，<strong>耕地链</strong><m></m>由于传送距离较短，无法满足传送距离大于 10 的要求，而剩下两条链通过合适的命令都可以实现。</p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><p>由于 Minecraft 服务器消耗的资源较多，本题最终采用了预约挑战的形式，选手可以通过预约客户端在网站上预约。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/d1a57f31246aa6b4d3e5eb1bc7818cc3.png"
+                        alt="预约客户端"
+                 ><div class="description image-desc">预约客户端</div></p>
+<p>在放出的 78 个可预约时间段中，共有 23 个被预约，其中 6 支队伍成功攻破本题！真的非常感谢大家。</p>
+<h4 id="珍珠链"><a href="#珍珠链" class="headerlink" title="珍珠链"></a>珍珠链</h4><p>在解出的队伍中，有 3 个队伍使用了珍珠链。</p>
+<p>我们出题时使用的命令如下。核心思路是生成一个船和末影珍珠，并把末影珍珠的 <code>Owner</code> 设置为船。然后在末影珍珠掉下来之前，乘船逃跑，实现 10 格以上的传送。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use execute summon acacia_boat positioned ~ ~99 ~ summon ender_pearl run data modify entity @s Owner set from entity @e[type=acacia_boat,limit=1] UUID</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/8af2381e0e49ad0e14e91ce4b6fc0bd3.png"
+                        alt="珍珠链"
+                 ><div class="description image-desc">珍珠链</div></p>
+<p>一血队伍采用的是类似的命令，但是多生成了一个潜影贝用来接末影珍珠，这样就不用乘船逃跑了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use execute summon oak_boat run execute positioned ~ ~15 ~ summon shulker run execute positioned ~ ~200 ~ summon ender_pearl run data modify entity @s Owner set from entity @e[type=oak_boat,sort=nearest,limit=1] UUID</span><br></pre></td></tr></table></figure>
+
+<p>二血队伍没有使用 <code>execute</code>，只使用了一条 <code>summon</code>，配合 <code>Passengers</code> 也实现了类似的利用思路。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use summon minecraft:area_effect_cloud ~ ~2.5 ~ &#123;Duration:0,Age:0,WaitTime:0,Passengers:[&#123;id:&quot;minecraft:oak_boat&quot;,NoGravity:1b,UUID:[I;9,9,9,9]&#125;,&#123;id:&quot;minecraft:ender_pearl&quot;,Motion:[0.0d,3d,0.0d],Owner:[I;9,9,9,9]&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>六血队伍使用的命令也类似，在此不再赘述。</p>
+<h4 id="末地链"><a href="#末地链" class="headerlink" title="末地链"></a>末地链</h4><p>相较于珍珠链，末地链的利用则更为有趣一些。根据前面的分析，只要从末地返回主世界两次，就可以实现要求。而要从末地无限制返回主世界，最容易想到的方法就是打龙了！</p>
+<p>我们预期的一个简单解法如下。通过三个带有末地传送门的矿车，在主世界打掉第一个，把剩下两个放进末地。由于玩家传送到末地出生点平台时，平台上的方块会被清空，包括我们放的末地传送门。所以我们需要先在末地放第二个传送门，穿过回到主世界，然后回到末地放下第三个传送门，再次穿过完成利用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use execute summon armor_stand summon armor_stand summon armor_stand at @e[type=armor_stand] run summon minecart ~1 ~1 ~1 &#123;Passengers:[&#123;id:&quot;falling_block&quot;,BlockState:&#123;Name:&quot;end_portal&quot;&#125;,Time:-20000&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p>三血队伍采用了类似的思路，不过少了一个末地传送门。要实现利用则需要 roll 一个较好的末地出生点，开船把第二个传送门送离出生点，这样就不会被清空。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use summon minecraft:oak_boat 0 9 1 &#123;Passengers:[&#123;id:&quot;oak_boat&quot;,Passengers:[&#123;id:&quot;falling_block&quot;,BlockState:&#123;Name:&quot;end_portal&quot;&#125;&#125;]&#125;,&#123;id:&quot;falling_block&quot;,BlockState:&#123;Name:&quot;end_portal&quot;&#125;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/2ea76aa8bd99f6f9694c6bbcbf600df4.png"
+                        alt="运气不错"
+                 ><div class="description image-desc">运气不错</div></p>
+<p>四血队伍选择打龙（需要 roll 一个出生点非封闭的种子），通过箱子矿车给自己准备了十分强大的弓箭，以及末影珍珠用于移动，成功拿下末影龙，并走两次末地主岛传送门得到 Flag。这个队伍原本还打算用末影水晶把龙蛋炸下来，不过貌似是因为冒险模式没能成功放下末影水晶。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use summon chest_minecart ~ ~1 ~ &#123;Items:[&#123;Slot:0,id:bow,components:&#123;&quot;enchantments&quot;:&#123;power:255&#125;&#125;&#125;,&#123;Slot:1,id:ender_pearl,count:16&#125;,&#123;Slot:2,id:arrow,count:64&#125;,&#123;Slot:3,id:end_crystal,count:64&#125;],Passengers:[&#123;id:falling_block,BlockState:&#123;Name:end_portal&#125;&#125;]&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/eb7ee799a8d666922409c93289a3f7ca.png"
+                        alt="打龙高手"
+                 ><div class="description image-desc">打龙高手</div></p>
+<p>五血队伍也选择了打龙，不过他们的命令……</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use setblock ~ ~ ~ minecraft:end_portal</span><br></pre></td></tr></table></figure>
+
+<p>没错，这一队选择了开挂打龙。</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/7413f020bf99dbf914699ca2f16bd6c4.png"
+                        alt="背背背背起了行囊 离开家的那一刻"
+                 ><div class="description image-desc">背背背背起了行囊 离开家的那一刻</div></p>
+<p>大哥不喜欢末影珍珠，直接飞怎么了？大哥不喜欢开挂刷神器，直接上手打怎么了？裁判进服时被大哥 KA 狂殴，忘关就是开了？实际上开挂也在我们的预期里，不过实际看到还是十分难绷。</p>
+<p>另外，我们还考虑了一些可能的方案，不过比较好笑。比如，生成三个末影人，然后……慢慢等他们放下手中的末地传送门。需要 roll 一个末地平台全封闭的种子，防止末影龙在等待过程中来打扰。（不过这个方案并没有成功实践过，等得太累了。）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/use execute summon enderman summon enderman summon enderman as @e[type=enderman] run data merge entity @s &#123;carriedBlockState:&#123;Name:&quot;end_portal&quot;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>由于题目太有节目效果（特别是末地链），我原本还打算剪一个视频发布，但是因为太蠢了没有装 Replay Mod，很多通过时刻也没有开 OBS 录制！为数不多录制下来的片段实际看的时候发现画质十分差，检查 OBS 设置发现我还用着国赛画质呢？？那还说啥了，不录了！</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="https://blog-1257445338.cos.ap-guangzhou.myqcloud.com/2026/5/3/d51890103fa999100de34d12fc5afbca.png"
+                        alt="byd 国赛导致的电竞帧率"
+                 ><div class="description image-desc">byd 国赛导致的电竞帧率</div></p>
+<p>和我出的其他大多数题目类似，「心理念写」也是一个超能力，作用是预知未来，并以摄像机等媒介成像。本题使用一条命令后，还需要做许多别的工作，对应了 Flag 中的 <code>snap the unknown future in one shot</code>，也就是用一条命令为之后要做的操作铺垫，令人忍俊不禁。（大概如此吧，我扯不动了。）</p>
+<p>我自认为本题既有传统的审计，又有新颖的体验，应该能让大家玩的开心吧！不过就在这五个月间，听说有另一场新手赛出了许多 Minecraft OSINT，最后呈现到本场比赛的效果是许多人看到 Minecraft 就吓哭了。看到有些队伍赛后后悔没看过题目内容，还是有些遗憾的。</p>
+<p>不论如何，明年如果有机会我还会出有趣的 Misc 题的，下次再见！</p>
+
+                    
+                </div>
+
+                
+                        
+<div class="post-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="copyright-post-title border-box text-ellipsis">
+                W4terCTF 2026 出题记录 — Misc 心理念写
+            </div>
+
+            <div class="copyright-post-link border-box text-ellipsis">
+                posts/3f96e73dd905/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="copyright-post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">milkory</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2026-05-03 17:00</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank">
+                        
+                            <i class="fa-brands fa-creative-commons"></i>
+                            <i class="fa-brands fa-creative-commons-by"></i>
+                            <i class="fa-brands fa-creative-commons-nc"></i>
+                            <i class="fa-brands fa-creative-commons-sa"></i>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/posts/77ee0d9c135d/"
+                                   title="US-TC 完赛记录 - LaVI 蜡笔 糖糖糖"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">US-TC 完赛记录 - LaVI 蜡笔 糖糖糖</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">题目内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1"><span class="nav-number">2.</span> <span class="nav-text">代码审计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%91%E6%88%98"><span class="nav-number">3.</span> <span class="nav-text">挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8F%8D%E7%8F%A0%E9%93%BE"><span class="nav-number">3.1.</span> <span class="nav-text">珍珠链</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AB%E5%9C%B0%E9%93%BE"><span class="nav-number">3.2.</span> <span class="nav-text">末地链</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+        &copy;&nbsp;<span>2021</span>&nbsp;-&nbsp;2026
+        
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">milkory</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+        <div class="record-info info-item">
+            
+                
+                    <div class="record-item border-box">
+                        <a class=""
+                           target="_blank"
+                           href="https://icp.gov.moe/?keyword=20211551"
+                        >
+                            萌ICP备20211551号
+                        </a>
+                    </div>
+                
+            
+        </div>
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%E5%86%85%E5%AE%B9"><span class="nav-number">1.</span> <span class="nav-text">题目内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1"><span class="nav-number">2.</span> <span class="nav-text">代码审计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%91%E6%88%98"><span class="nav-number">3.</span> <span class="nav-text">挑战</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8F%8D%E7%8F%A0%E9%93%BE"><span class="nav-number">3.1.</span> <span class="nav-text">珍珠链</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AB%E5%9C%B0%E9%93%BE"><span class="nav-number">3.2.</span> <span class="nav-text">末地链</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/utils.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/header-shrink.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/back2top.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/toggle-theme.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/code-block.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/main.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/libs/anime.min.js"></script>
+
+<!-- local search -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/local-search.min.js"></script>
+
+
+<!-- lazyload -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/lazyload.min.js"></script>
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.3/js/post/copyright-info.min.js"></script>
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
